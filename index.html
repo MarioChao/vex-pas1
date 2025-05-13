@@ -12,10 +12,14 @@
 		<link rel="stylesheet" href="https://mariochao.github.io/src/style-no-hover.css">
 		<link rel="stylesheet" href="https://mariochao.github.io/dream-game/src/assets/styles/navigation-bar.css">
 		<link rel="icon" href="./src/images/team-logo-mint.png">
+		<!-- Script -->
+		<script type="module" src="./index.js"></script>
 		<!-- Font from https://fonts.google.com/ -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	</head>
 	<body class="navbar-body" style="background-color: #E5FFE0; font-family: Roboto;">
 		<!-- Navigation bar -->
@@ -23,7 +27,7 @@
 			<h1>VEX PAS1</h1>
 		</div>
 		<!-- About team -->
-		<div>
+		<div style="display: none;" id="about-team">
 			<h2 style="text-align: center;">Team 96969Y</h2>
 			<div style="text-align: center;">
 				<p>
@@ -41,40 +45,84 @@
 				</p>
 			</div>
 		</div>
-		<hr color="#88CC88">
 		<!-- Highlights -->
-		<div>
-			<h2 style="text-align: center;">Highlights</h2>
-			<div class="flex-container">
-				<div style="text-align: center;">
-					<p>2023-2024 Over Under Balanced Triballs</p>
-					<img src="./src/images/over-under-balanced-triballs.png" height="200">
-				</div>
-				<div style="text-align: center;">
-					<p>2023-2024 Over Under Robot</p>
-					<img src="./src/images/over-under-c-tier-hang.png" height="200">
-				</div>
-				<div style="text-align: center;">
-					<p>2023-2024 Over Under C-tier Hang</p>
-					<iframe width="350" height="200" src="https://www.youtube.com/embed/65gU3VYHwbk?si=XI0F5HNGxZgod5Yl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<div style="display: none;" id="highlights">
+			<hr color="#88CC88">
+			<h1 style="text-align: center;">Highlights</h1>
+
+			<div>
+				<h2 style="text-align: center;">2023-24 | Over Under</h2>
+				<div class="flex-container">
+					<div style="text-align: center;">
+						<p>Balanced Triballs</p>
+						<img src="./src/images/over-under-balanced-triballs.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>Final Robot</p>
+						<img src="./src/images/over-under-c-tier-hang.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>Horizontal Bar C-tier Hang</p>
+						<iframe width="350" height="200" src="https://www.youtube.com/embed/65gU3VYHwbk?si=XI0F5HNGxZgod5Yl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+					<div style="text-align: center;">
+						<p>Skills Practice</p>
+						<img src="./src/images/over-under-skills-practice.png" height="200">
+					</div>
 				</div>
 			</div>
-			<div class="flex-container">
-				<div style="text-align: center;">
-					<p>2022-2023 Community Online Challenge</p>
-					<iframe width="355" height="200" src="https://www.youtube.com/embed/gPMejBWtg2U?si=0v2sKKWucgFK7tfS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+			<div>
+				<h2 style="text-align: center;">2022-23 | Spin Up</h2>
+				<div class="flex-container">
+					<div style="text-align: center;">
+						<p>Team Photo (with 17022A)</p>
+						<img src="./src/images/spin-up-team-photo-1.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>TAI-VEX Robot</p>
+						<img src="./src/images/spin-up-robot-taivex.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>Team Photo (with 66799G)</p>
+						<img src="./src/images/spin-up-team-photo-2.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>Community Online Challenge</p>
+						<iframe width="355" height="200" src="https://www.youtube.com/embed/gPMejBWtg2U?si=0v2sKKWucgFK7tfS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+					<div style="text-align: center;">
+						<p>Worlds Robot</p>
+						<img src="./src/images/spin-up-robot-worlds.png" height="200">
+					</div>
 				</div>
-				<div style="text-align: center;">
-					<p>2022-2023 Spin Up Worlds Robot</p>
-					<img src="./src/images/spin-up-robot-worlds.png" height="200">
+			</div>
+
+			<div>
+				<h2 style="text-align: center;">2021-22 | Tipping Point</h2>
+				<div class="flex-container">
+					<div style="text-align: center;">
+						<p>Team Photo</p>
+						<img src="./src/images/tipping-point-team-photo-1.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>Team Dinner</p>
+						<img src="./src/images/tipping-point-team-photo-2.png" height="200">
+					</div>
+					<div style="text-align: center;">
+						<p>Worlds Robot</p>
+						<img src="./src/images/tipping-point-robot-worlds.png" height="200">
+					</div>
 				</div>
-				<div style="text-align: center;">
-					<p>2021-2022 Tipping Point Worlds Robot</p>
-					<img src="./src/images/tipping-point-robot-worlds.png" height="200">
-				</div>
-				<div style="text-align: center;">
-					<p>2020-2021 Change Up Robot</p>
-					<img src="./src/images/change-up-robot.png" height="200">
+			</div>
+
+			<div>
+				<h2 style="text-align: center;">2020-21 | Change Up</h2>
+				<div class="flex-container">
+					<div style="text-align: center;">
+						<p>V3 Robot</p>
+						<img src="./src/images/change-up-robot.png" height="200">
+					</div>
 				</div>
 			</div>
 		</div>
